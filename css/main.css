@@ -1,0 +1,97 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+.tecnica {
+	margin-bottom: 30px;
+}
+
+.tecnica__tipo {
+	color: blue;
+	margin: 0 0 10px 0;
+	font-weight: normal;
+}
+
+.tecnica__contenedor {
+	width: 700px;
+	min-height: 500px;
+	border: 1px dashed black;
+}
+
+.tecnica__elemento {
+	width: 250px;
+	height: 250px;
+	border: 1px solid black;
+	background-color: #1BD613;
+}
+
+/* Text align */
+.tecnica--text-align .tecnica__contenedor {
+	text-align: center;
+}
+
+.tecnica--text-align .tecnica__elemento {
+	display: inline-block; /* Se cambia el display del elemento, que era de bloque, para que se centre*/
+}
+
+
+/*Margin auto*/
+.tecnica--margin-auto .tecnica__elemento {
+/*	margin-left: auto; Todo el espacio disponible queda en la izquierda 
+	margin-right: auto;  Se empuja desde los dos lados*/
+	margin: 0 auto;
+}
+
+/* Absolute position*/
+
+.tecnica--absolute-position .tecnica__contenedor {
+	position: relative;
+}
+
+.tecnica--absolute-position .tecnica__elemento {
+	position: absolute;
+	left: 50%;
+	margin-left: -125px; /* Es la mitad del tamaño del elemento (cuadrado) */
+	top: 50%;
+	margin-top: -125px; /* Es la mitad del tamaño del elemento (cuadrado) */
+}
+
+/* Translate */
+
+.tecnica--translate .tecnica__contenedor {
+	position: relative;
+}
+
+.tecnica--translate .tecnica__elemento {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* Flexbox */
+
+.tecnica--flexbox .tecnica__contenedor {
+	display: flex;
+	justify-content: center; /* En el eje horizontal. Es el main axis preterminado*/
+	align-items: center;
+}
+
+/* Inline elements*/
+
+.tecnica--inline-elements img {
+	vertical-align: middle;
+}
